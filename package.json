@@ -1,5 +1,5 @@
 {
-  "version": "2.16.0",
+  "version": "1.2.6",
   "license": "MIT",
   "sideEffects": false,
   "main": "dist/cjs/index.js",
@@ -26,10 +26,11 @@
     "trailingComma": "es5",
     "quoteProps": "preserve"
   },
-  "name": "paypal-rest-apislib",
-  "description": "An order represents a payment between two or more parties. Use the Orders API to create, update, retrieve, authorize, and capture orders., Call the Payments API to authorize payments, capture authorized payments, refund payments that have already been captured, and show payment information. Use the Payments API in conjunction with the <a href=\"/docs/api/orders/v2/\">Orders API</a>. For more information, see the <a href=\"/docs/checkout/\">PayPal Checkout Overview</a>., The Payment Method Tokens API saves payment methods so payers don't have to enter details for future transactions. Payers can check out faster or pay without being present after they agree to save a payment method.<br><br>The API associates a payment method with a temporary setup token. Pass the setup token to the API to exchange the setup token for a permanent token.<br><br>The permanent token represents a payment method that's saved to the vault. This token can be used repeatedly for checkout or recurring transactions such as subscriptions.<br><br>The Payment Method Tokens API is available in the US only.",
+  "name": "test-sdk",
+  "description": "TEST",
   "author": {
-    "name": "APIMATIC SDK Generator"
+    "name": "taha",
+    "email": "taha.ali@apimatic.io"
   },
   "devDependencies": {
     "@types/jest": "^29.4.0",
@@ -49,7 +50,16 @@
     "@apimatic/oauth-adapters": "^0.4.8",
     "@apimatic/schema": "^0.7.14"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tahaali2000/test-js-sdk.git"
+  },
   "bugs": {
     "email": "support@apimatic.io"
-  }
+  },
+  "homepage": "https://github.com/tahaali2000/testerrr-python-sdk",
+  "keywords": [
+    "SDK"
+  ],
+  "contributors": []
 }

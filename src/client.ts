@@ -71,7 +71,7 @@ export class Client implements ClientInterface {
     };
 
     this._userAgent = updateUserAgent(
-      'PayPal REST API TypeScript SDK, Version: 2.16.0, on OS {os-info}'
+      'PayPal REST API TypeScript SDK, Version: 1.2.6, on OS {os-info}'
     );
     this._requestBuilderFactory = createRequestHandlerFactory(
       (server) => getBaseUri(server, this._config),
