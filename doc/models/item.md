@@ -1,8 +1,6 @@
 
 # Item
 
-The details for the items to be purchased.
-
 ## Structure
 
 `Item`
@@ -11,35 +9,54 @@ The details for the items to be purchased.
 
 | Name | Type | Tags | Description |
 |  --- | --- | --- | --- |
-| `name` | `string` | Required | The item name or title.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `127` |
-| `unitAmount` | [`Money`](../../doc/models/money.md) | Required | The currency and amount for a financial transaction, such as a balance or payment due. |
-| `tax` | [`Money \| undefined`](../../doc/models/money.md) | Optional | The currency and amount for a financial transaction, such as a balance or payment due. |
-| `quantity` | `string` | Required | The item quantity. Must be a whole number.<br><br>**Constraints**: *Maximum Length*: `10`, *Pattern*: `^[1-9][0-9]{0,9}$` |
-| `description` | `string \| undefined` | Optional | The detailed item description.<br><br>**Constraints**: *Maximum Length*: `127` |
-| `sku` | `string \| undefined` | Optional | The stock keeping unit (SKU) for the item.<br><br>**Constraints**: *Maximum Length*: `127` |
-| `url` | `string \| undefined` | Optional | The URL to the item being purchased. Visible to buyer and used in buyer experiences.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `2048` |
-| `category` | [`ItemCategory \| undefined`](../../doc/models/item-category.md) | Optional | The item category type.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `20` |
-| `imageUrl` | `string \| undefined` | Optional | The URL of the item's image. File type and size restrictions apply. An image that violates these restrictions will not be honored.<br><br>**Constraints**: *Minimum Length*: `1`, *Maximum Length*: `2048`, *Pattern*: `^(https:)([/\|.\|\w\|\s\|-])*\.(?:jpg\|gif\|png\|jpeg\|JPG\|GIF\|PNG\|JPEG)` |
-| `upc` | [`UniversalProductCode \| undefined`](../../doc/models/universal-product-code.md) | Optional | The Universal Product Code of the item. |
+| `id` | `string` | Required | - |
+| `name` | `string` | Required | - |
+| `date` | `string` | Required | - |
+| `dateTime` | `string` | Required | - |
+| `decimal` | `number` | Required | - |
+| `mLong` | `bigint` | Required | - |
+| `bool` | `boolean` | Required | - |
+| `customEnum` | [`CustomEnum`](../../doc/models/custom-enum.md) | Required | - |
+| `status` | [`StatusEnum \| undefined`](../../doc/models/status-enum.md) | Optional | - |
+| `jsonObject` | `unknown` | Required | A generic JSON object |
+| `animal` | `unknown` | Required | - |
+| `map` | [`Record<string, Message>`](../../doc/models/message.md) | Required | - |
 
 ## Example (as JSON)
 
 ```json
 {
-  "name": "name2",
-  "unit_amount": {
-    "currency_code": "currency_code2",
-    "value": "value8"
+  "id": "550e8400-e29b-41d4-a716-446655440000",
+  "name": "John Doe",
+  "date": "2024-05-24",
+  "dateTime": "05/24/2024 12:00:00",
+  "decimal": 1234.56,
+  "long": 1234567890123,
+  "bool": true,
+  "CustomEnum": "VALUE3",
+  "jsonObject": {
+    "key1": "val1",
+    "key2": "val2"
   },
-  "tax": {
-    "currency_code": "currency_code0",
-    "value": "value6"
+  "Animal": {
+    "key1": "val1",
+    "key2": "val2"
   },
-  "quantity": "quantity8",
-  "description": "description2",
-  "sku": "sku8",
-  "url": "url6",
-  "category": "DIGITAL_GOODS"
+  "Map": {
+    "key0": {
+      "code": 246,
+      "text": "text4"
+    },
+    "key1": {
+      "code": 246,
+      "text": "text4"
+    },
+    "key2": {
+      "code": 246,
+      "text": "text4"
+    }
+  },
+  "status": "active"
 }
 ```
 
